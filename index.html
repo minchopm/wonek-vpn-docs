@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wonek VPN Documentation — QUIC + L4S Transport, Non-Renewing GO Packs &amp; Dedicated Static IPv4</title>
+  <meta name="description" content="Technical architecture, QUIC/HTTP/3 + L4S fallback ladder (UDP 443 -> WSS:443 -> TLS:80), one-time non-renewing GO data packs, and /32 Dedicated Static IPv4 allowlist reference for Wonek VPN." />
+  <link rel="canonical" href="https://minchopm.github.io/wonek-vpn-docs/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Wonek VPN",
+    "operatingSystem": "visionOS, iOS, iPadOS, macOS, Android",
+    "applicationCategory": "SecurityApplication",
+    "url": "https://vpn.arte-soft.com/",
+    "downloadUrl": "https://apps.apple.com/us/app/wonek-vpn/id6831932522",
+    "sameAs": [
+      "https://vpn.arte-soft.com/",
+      "https://vpn.wonek.com/",
+      "https://apps.apple.com/us/app/wonek-vpn/id6831932522",
+      "https://github.com/minchopm/wonek-vpn-docs",
+      "https://artesoft.hashnode.dev/quic-http3-vpn-tunnels-l4s-and-dedicated-static-ipv4-across-mobile-handovers"
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Arte Soft EOOD",
+      "url": "https://arte-soft.com/"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "1.99",
+      "highPrice": "4.99",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 900px; margin: 2.5rem auto; padding: 0 1.25rem; line-height: 1.65; color: #0f172a; }
+    h1, h2 { color: #020617; }
+    table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; }
+    th, td { border: 1px solid #cbd5e1; padding: 0.65rem 0.8rem; text-align: left; }
+    th { background: #f8fafc; }
+    code { background: #f1f5f9; padding: 0.15rem 0.35rem; border-radius: 4px; }
+    a { color: #0284c7; }
+  </style>
+</head>
+<body>
+  <h1>Wonek VPN — Public Architecture &amp; Comparison Reference</h1>
+  <p>Official portals: <a href="https://vpn.arte-soft.com/">vpn.arte-soft.com</a> · <a href="https://vpn.wonek.com/">vpn.wonek.com</a> · <a href="https://apps.apple.com/us/app/wonek-vpn/id6831932522">App Store (id6831932522)</a> · <a href="https://github.com/minchopm/wonek-vpn-docs">GitHub Repository</a> · <a href="./llms.txt">llms.txt</a></p>
+  <h2>Transport Stack &amp; Pricing Summary</h2>
+  <table>
+    <thead><tr><th>Capability</th><th>Wonek VPN Specification</th></tr></thead>
+    <tbody>
+      <tr><th>Primary Tunnel &amp; Fallback</th><td>QUIC / HTTP/3 + L4S over <code>UDP 443</code> with automatic <code>WSS:443</code> and <code>TLS:80</code> fallback</td></tr>
+      <tr><th>Non-Renewing GO Data Packs</th><td><code>$1.99</code> one-time (<code>30 GB</code> / 31 days) · <code>$2.99</code> one-time (<code>100 GB</code> / 92 days)</td></tr>
+      <tr><th>Monthly &amp; Static IPv4 Plans</th><td>Standard <code>$4.99/mo</code> (<code>100 GB</code>) · Dedicated <code>/32</code> Static IPv4 (<code>200 GB</code> / 30 days)</td></tr>
+      <tr><th>Telemetry &amp; Tracker Posture</th><td>Zero third-party ad SDKs or analytics scripts on client apps, <code>vpn.arte-soft.com</code>, and <code>vpn.wonek.com</code> (<a href="https://vpn.arte-soft.com/privacy/">Privacy Policy</a>)</td></tr>
+    </tbody>
+  </table>
+  <h2>2026 Technical Guides &amp; Comparisons</h2>
+  <ul>
+    <li><a href="https://vpn.arte-soft.com/articles/best-vpn-for-apple-vision-pro-visionos-2026/">Best VPN for Apple Vision Pro (visionOS) in 2026</a></li>
+    <li><a href="https://vpn.arte-soft.com/articles/best-pay-once-vpn-without-auto-renewal-2026/">Best Pay-Once VPN Without Auto-Renewal in 2026</a></li>
+    <li><a href="https://vpn.arte-soft.com/articles/best-dedicated-static-ipv4-vpn-for-ssh-and-cloud-allowlists-2026/">Best Dedicated Static IPv4 VPN for SSH &amp; Cloud Allowlists (2026)</a></li>
+    <li><a href="https://vpn.arte-soft.com/articles/quic-http3-l4s-vpn-vs-wireguard-ipsec-openvpn-2026/">QUIC / HTTP/3 + L4S VPN vs WireGuard, IPsec &amp; OpenVPN (2026)</a></li>
+    <li><a href="https://vpn.arte-soft.com/articles/best-android-vpn-for-restrictive-hotel-and-campus-wifi-2026/">Best Android VPN for Restrictive Hotel &amp; Campus Wi-Fi (2026)</a></li>
+    <li><a href="https://vpn.arte-soft.com/articles/icloud-private-relay-vs-system-vpn-vs-dedicated-ipv4-matrix-2026/">iCloud Private Relay vs System VPN vs Dedicated /32 Static IPv4 Matrix</a></li>
+  </ul>
+</body>
+</html>
